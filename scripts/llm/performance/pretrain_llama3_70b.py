@@ -116,7 +116,7 @@ if __name__ == "__main__":
     kwargs = get_user_configs(args.gpu.lower(), "pre_train", "llama3", "70b", args)
     num_nodes, mbs, gbs, tp_size, pp_size, cp_size, vp_size, ep_size, _ = kwargs
     num_nodes = 1
-    
+    mbs = 2 # B200
     tp_size = 4
     pp_size = 1
     cp_size = 2

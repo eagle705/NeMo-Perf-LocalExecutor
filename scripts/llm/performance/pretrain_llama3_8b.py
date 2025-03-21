@@ -77,6 +77,12 @@ if __name__ == "__main__":
 
     kwargs = get_user_configs(args.gpu.lower(), "pre_train", "llama3", "8b", args)
     num_nodes, mbs, gbs, tp_size, pp_size, cp_size, vp_size, ep_size, _ = kwargs
+    
+    # B200 setting
+    mbs = 2
+    tp_size = 1
+    pp_size = 1
+    cp_size = 1
 
     recipe = override_recipe_configs(args, num_nodes, mbs, gbs, tp_size, pp_size, cp_size, vp_size, ep_size)
 

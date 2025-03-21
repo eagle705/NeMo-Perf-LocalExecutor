@@ -81,6 +81,7 @@ if __name__ == "__main__":
     num_nodes, mbs, gbs, tp_size, pp_size, cp_size, vp_size, ep_size, etp_size = kwargs
     print(f"args:{args}, kwargs:{kwargs}")
     num_nodes = 1
+    mbs = 2 # B200 setting
     pp_size = 1
     vp_size = 1
     tp_size = 1
